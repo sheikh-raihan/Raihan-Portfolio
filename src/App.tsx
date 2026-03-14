@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Github, 
   Linkedin, 
@@ -112,7 +112,7 @@ const Navbar = () => {
             </a>
           ))}
           <a 
-            href="https://drive.google.com/file/d/1nmsoyqJqg6zpj8CPbJzzkyzW-S4gsV1n/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1EARqHfxtO6Vb9qlIxN8W5NTTW6xjW7Oq/view?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer"
             className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-brand-accent transition-all"
@@ -341,7 +341,11 @@ const Works = () => {
     { id: 5, title: "Poster 5", category: "Event Design", image: "/posters/poster5.jpg" },
     { id: 6, title: "Poster 6", category: "Social Cause", image: "/posters/poster6.jpg" },
     { id: 7, title: "Poster 7", category: "Event Design", image: "/posters/poster7.jpg" },
-    { id: 8, title: "Poster 8", category: "Educational", image: "/posters/poster8.jpg" }
+    { id: 8, title: "Poster 8", category: "Educational", image: "/posters/poster8.jpg" },
+    { id: 9, title: "Poster 9", category: "Graphic Design", image: "/posters/poster9.jpg" },
+    { id: 10, title: "Poster 10", category: "Graphic Design", image: "/posters/poster10.jpg" },
+    { id: 11, title: "Poster 11", category: "Graphic Design", image: "/posters/poster11.jpg" },
+    { id: 12, title: "Poster 12", category: "Graphic Design", image: "/posters/poster12.jpg" }
   ];
 
   return (
@@ -384,13 +388,16 @@ const Works = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="group relative aspect-[3/4] bg-stone-200 rounded-2xl overflow-hidden"
+                className="group relative aspect-square bg-stone-200 rounded-2xl overflow-hidden"
               >
                 <img 
                   src={poster.image} 
                   alt={poster.title} 
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${poster.id}/800/800`;
+                  }}
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
                   <p className="text-xs font-mono uppercase tracking-wider mb-1">{poster.category}</p>
@@ -399,9 +406,6 @@ const Works = () => {
               </motion.div>
             ))}
           </div>
-          <p className="mt-8 text-center text-muted italic">
-            Note: I have these posters with me and can provide high-resolution versions upon request.
-          </p>
         </div>
       </div>
     </section>
@@ -536,26 +540,26 @@ const Contact = () => {
             Whether you have a project idea, want to talk about physics, or just want to stargaze, I'm always open to a chat.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <a href="mailto:sheikhraihan99@gmail.com" className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
-              <Mail size={32} className="mx-auto mb-4 text-brand-accent" />
-              <h3 className="font-bold mb-1">Email Me</h3>
-              <p className="text-sm text-white/40">sheikhraihan99@gmail.com</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            <a href="mailto:sheikhraihan99@gmail.com" className="p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
+              <Mail size={28} className="mx-auto mb-3 text-brand-accent" />
+              <h3 className="font-bold text-sm mb-1">Email Me</h3>
+              <p className="text-xs text-white/40 truncate">sheikhraihan99@gmail.com</p>
             </a>
-            <a href="https://wa.me/qr/DCWATDKYPPUDC1" target="_blank" rel="noopener noreferrer" className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
-              <WhatsAppIcon size={32} className="mx-auto mb-4 text-brand-accent" />
-              <h3 className="font-bold mb-1">WhatsApp</h3>
-              <p className="text-sm text-white/40">Available for chat</p>
+            <a href="https://wa.me/qr/DCWATDKYPPUDC1" target="_blank" rel="noopener noreferrer" className="p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
+              <WhatsAppIcon size={28} className="mx-auto mb-3 text-brand-accent" />
+              <h3 className="font-bold text-sm mb-1">WhatsApp</h3>
+              <p className="text-xs text-white/40">Available for chat</p>
             </a>
-            <a href="https://github.com/sheikh-raihan" target="_blank" rel="noopener noreferrer" className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
-              <Github size={32} className="mx-auto mb-4 text-brand-accent" />
-              <h3 className="font-bold mb-1">GitHub</h3>
-              <p className="text-sm text-white/40">@sheikh-raihan</p>
+            <a href="https://github.com/sheikh-raihan" target="_blank" rel="noopener noreferrer" className="p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
+              <Github size={28} className="mx-auto mb-3 text-brand-accent" />
+              <h3 className="font-bold text-sm mb-1">GitHub</h3>
+              <p className="text-xs text-white/40">@sheikh-raihan</p>
             </a>
-            <a href="https://www.linkedin.com/in/sheikhraihan/" target="_blank" rel="noopener noreferrer" className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
-              <Linkedin size={32} className="mx-auto mb-4 text-brand-accent" />
-              <h3 className="font-bold mb-1">LinkedIn</h3>
-              <p className="text-sm text-white/40">Available for opportunities</p>
+            <a href="https://www.linkedin.com/in/sheikhraihan/" target="_blank" rel="noopener noreferrer" className="p-6 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group">
+              <Linkedin size={28} className="mx-auto mb-3 text-brand-accent" />
+              <h3 className="font-bold text-sm mb-1">LinkedIn</h3>
+              <p className="text-xs text-white/40">Available for opportunities</p>
             </a>
           </div>
         </motion.div>
@@ -566,16 +570,16 @@ const Contact = () => {
 
 const Footer = () => {
   return (
-    <footer className="py-12 px-6 border-t border-black/5">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="py-8 px-6 border-t border-black/5">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-sm text-muted">
           © {new Date().getFullYear()} Sheikh Raihan. Built with passion.
         </p>
-        /*<div className="flex gap-6">
+        {/* <div className="flex gap-6">
           <a href="https://www.facebook.com/sheikh.raihan.99" className="text-sm text-muted hover:text-black transition-colors">Facebook</a>
           <a href="https://www.linkedin.com/in/sheikhraihan/" className="text-sm text-muted hover:text-black transition-colors">LinkedIn</a>
           <a href="https://www.instagram.com/sheikh.raihan/" className="text-sm text-muted hover:text-black transition-colors">Instagram</a>
-        </div>*/
+        </div> */}
       </div>
     </footer>
   );
