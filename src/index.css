@@ -1,42 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Playfair Display", serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-
-  --color-brand-primary: #141414;
-  --color-brand-secondary: #666666;
-  --color-brand-accent: #0070f3;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-accent: #f27d26;
+  --color-brand-secondary: #8e9299;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-white text-brand-primary antialiased selection:bg-brand-accent selection:text-white;
+    @apply bg-white text-black antialiased;
   }
 }
 
-.glass-nav {
-  @apply sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5;
-}
+@layer utilities {
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-24;
+  }
 
-.section-padding {
-  @apply py-20 px-6 md:px-12 lg:px-24;
-}
+  .heading-xl {
+    @apply text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9];
+  }
 
-.heading-xl {
-  @apply font-display text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.9];
-}
+  .heading-lg {
+    @apply text-4xl md:text-6xl font-bold tracking-tight;
+  }
 
-.heading-lg {
-  @apply font-display text-4xl md:text-5xl tracking-tight;
-}
+  .text-muted {
+    @apply text-black/60;
+  }
 
-.text-muted {
-  @apply text-brand-secondary font-light;
-}
-
-.card-hover {
-  @apply transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg hover:shadow-black/5;
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
 }
