@@ -1,5 +1,6 @@
 {
   "name": "raihan-portfolio",
+  "homepage": "https://sheikh-raihan.github.io/Raihan-Portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,12 +8,15 @@
     "dev": "vite --host 0.0.0.0 --port 3000",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview --port 3000"
+    "preview": "vite preview --port 3000",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.36.0",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.378.0",
     "motion": "^11.1.7",
     "react": "^18.3.1",
