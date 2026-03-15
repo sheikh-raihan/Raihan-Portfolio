@@ -1,20 +1,17 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<img width="1200" height="475" alt="Portfolio Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Personal Portfolio Website
 
-This contains everything you need to run your app locally.
+This repository contains the source code for my personal portfolio website.  
+The site showcases my projects, skills, and design work, along with information about my background and interests in technology and UI/UX.
 
-View your app in AI Studio: https://ai.studio/apps/ee4b020e-bcc5-4114-83ad-3c478892c0be
+## 🚀 Features
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- Responsive modern UI
+- Smooth scrolling navigation
+- Project showcase section
+- Skills and experience overview
+- Contact section
+- Clean and minimal design
