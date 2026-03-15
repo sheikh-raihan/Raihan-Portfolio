@@ -334,18 +334,18 @@ const Works = () => {
   ];
 
   const posters = [
-    { id: 1, title: "Poster 1", category: "Graphic Design", image: "/posters/poster1.jpg" },
-    { id: 2, title: "Poster 2", category: "Graphic Design", image: "/posters/poster2.jpg" },
-    { id: 3, title: "Poster 3", category: "Graphic Design", image: "/posters/poster3.jpg" },
-    { id: 4, title: "Poster 4", category: "Graphic Design", image: "/posters/poster4.jpg" },
-    { id: 5, title: "Poster 5", category: "Event Design", image: "/posters/poster5.jpg" },
-    { id: 6, title: "Poster 6", category: "Social Cause", image: "/posters/poster6.jpg" },
-    { id: 7, title: "Poster 7", category: "Event Design", image: "/posters/poster7.jpg" },
-    { id: 8, title: "Poster 8", category: "Educational", image: "/posters/poster8.jpg" },
-    { id: 9, title: "Poster 9", category: "Graphic Design", image: "/posters/poster9.jpg" },
-    { id: 10, title: "Poster 10", category: "Graphic Design", image: "/posters/poster10.jpg" },
-    { id: 11, title: "Poster 11", category: "Graphic Design", image: "/posters/poster11.jpg" },
-    { id: 12, title: "Poster 12", category: "Graphic Design", image: "/posters/poster12.jpg" }
+    { id: 1, title: "Poster 1", category: "Graphic Design", image: "posters/poster1.jpg" },
+    { id: 2, title: "Poster 2", category: "Graphic Design", image: "posters/poster2.jpg" },
+    { id: 3, title: "Poster 3", category: "Graphic Design", image: "posters/poster3.jpg" },
+    { id: 4, title: "Poster 4", category: "Graphic Design", image: "posters/poster4.jpg" },
+    { id: 5, title: "Poster 5", category: "Event Design", image: "posters/poster5.jpg" },
+    { id: 6, title: "Poster 6", category: "Social Cause", image: "posters/poster6.jpg" },
+    { id: 7, title: "Poster 7", category: "Event Design", image: "posters/poster7.jpg" },
+    { id: 8, title: "Poster 8", category: "Educational", image: "posters/poster8.jpg" },
+    { id: 9, title: "Poster 9", category: "Graphic Design", image: "posters/poster9.jpg" },
+    { id: 10, title: "Poster 10", category: "Graphic Design", image: "posters/poster10.jpg" },
+    { id: 11, title: "Poster 11", category: "Graphic Design", image: "posters/poster11.jpg" },
+    { id: 12, title: "Poster 12", category: "Graphic Design", image: "posters/poster12.jpg" }
   ];
 
   return (
